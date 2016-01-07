@@ -7,9 +7,9 @@ for all resources in the admin dashboard,
 as defined by the DashboardManifest.
 %>
 
-<ul class="sidebar__list">
+<ol class="sidebar__list" role="navigation">
   <% DashboardManifest::DASHBOARDS.each do |resource| %>
-    <li>
+    <li class="sidebar__list-item">
       <%= link_to(
         display_resource_name(resource),
         [namespace, resource],
@@ -17,4 +17,4 @@ as defined by the DashboardManifest.
       ) %>
     </li>
   <% end %>
-</ul>
+</ol>
